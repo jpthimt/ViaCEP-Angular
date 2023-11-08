@@ -1,0 +1,99 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #f="ngForm">
+      <div class="Form-group">
+        <br /><br />
+        <label for="cep">CEP:</label><br />
+        <input
+          type="text"
+          class="Form-control"
+          id="cep"
+          name="cep"
+          [(ngModel)]="endereco.cep" required
+          #cep="ngModel"
+          (blur)="consultaCep(cep.value, f)"
+        />
+
+        <br /><br />
+        <label for="logradouro">LOGRADOURO</label><br />
+        <input
+          type="text"
+          class="Form-control"
+          id="logradouro"
+          name="logradouro"
+          [(ngModel)] = "endereco.logradouro"
+          #logradouro="ngModel"
+          placeholder="..."
+          disabled
+        />
+
+        <br /><br />
+        <label for="logradouro">COMPLEMENTO</label><br />
+        <input
+          type="text"
+          class="Form-control"
+          id="complemento"
+          name="complemento"
+          [(ngModel)]="endereco.complemento"
+          #logradouro="ngModel"
+          placeholder="..."
+          disabled
+        />
+
+        <br /><br />
+        <label for="bairro">BAIRRO</label><br />
+        <input
+          type="text"
+          class="Form-control"
+          id="bairro"
+          name="bairro"
+          [(ngModel)]="endereco.bairro"
+          #bairro="ngModel"
+          placeholder="..."
+          disabled
+        />
+
+        <br /><br />
+        <label for="localidade">CIDADE</label><br />
+        <input
+          type="text"
+          class="Form-control"
+          id="localidade"
+          name="localidade"
+          [(ngModel)]="endereco.localidade"
+          #cidade="ngModel"
+          placeholder="..."
+          disabled
+        />
+
+        <br /><br />
+        <label for="uf">UF</label><br />
+        <input
+          type="text"
+          class="Form-control"
+          id="uf"
+          name="uf"
+          [(ngModel)]="endereco.uf"
+          #uf="ngModel"
+          placeholder="..."
+          disabled
+        />
+
+        <br /><br />
+        <label for="ddd">DDD</label><br />
+        <input
+          type="text"
+          class="Form-control"
+          id="ddd"
+          name="ddd"
+          [(ngModel)] = "endereco.ddd"
+          #uf="ngModel"
+          placeholder="..."
+          disabled
+        />
+      </div>
+      <button type="submit"
+        class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>

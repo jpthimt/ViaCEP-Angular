@@ -1,0 +1,20 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Cep</th>
+            <th scope="col">Logradouro</th>
+          </tr>
+        </thead>
+        <tbody> 
+          <tr *ngFor="let endereco of enderecos">
+            <td>{{ endereco.id }} </td>
+            <td>{{ endereco.cep }}</td>
+            <td>{{ endereco.logradouro }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
